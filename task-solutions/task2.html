@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pop-up</title>
+	<style>
+
+		#wrapper {
+			display: none;
+			opacity: 0.6;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			padding: 16px;
+			background-color: #000;
+			z-index: 50;
+		}
+
+		#form {
+			width: 450px;
+			height: 250px;
+			color: #fff;
+			background-color: #9a59b5;
+			padding: 5px 15px 11px 15px;
+			margin: auto;
+			text-align: right;
+			overflow: hidden;
+			border: 2px solid white;
+			border-radius: 3px;
+			webkit-border-radius: 3px;
+			moz-border-radius: 3px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: none;
+			z-index: 100;
+		}
+
+		form h2 {
+			padding: 0;
+			margin: 0;
+			display: block;
+			border-bottom: 1px solid white;
+			margin-bottom: 15px;
+			text-align: left;
+		}
+
+		form input {
+			width: 345px;
+			height: 26px;
+			padding: 10px;
+			box-sizing: border-box;
+			webkit-box-sizing: border-box;
+			moz-box-sizing: border-box;
+
+			border-radius: 3px;
+			webkit-border-radius: 3px;
+			moz-border-radius: 3px;
+			margin-bottom: 10px;
+			margin-left: 23px;
+		}
+
+		.state {
+			width: 125px;
+			display: inline-block;
+			margin-right: 13px;
+		}
+		
+
+		.post-code {
+			margin-left: 13px;
+			width: 125px;
+		}
+		#form button {
+			border-radius: 3px;
+			webkit-border-radius: 3px;
+			moz-border-radius: 3px;
+		}
+		
+
+		.save,
+		.cancel {
+			box-sizing: border-box;
+			webkit-box-sizing: border-box;
+			moz-box-sizing: border-box;
+			display: inline-block;
+			height: 28px;
+			vertical-align: middle;
+		}
+
+		.save {
+			background-color: #4388cb;
+			color: #fff;
+			
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="wrapper" onclick="display('none')"></div>
+	<form id="form">
+		<h2>Adress Details</h2>
+			<!-- <span>Line 1</span>
+			<span>Line 2</span>
+			<span>City</span>
+			<span>State</span>
+			<span>Country</span> -->
+		Line 1<input type="text" placeholder="Adress Line 1"><br>
+		Line 2<input type="text" placeholder="Adress Line 2"><br>
+		City<input type="text" placeholder="City"><br>
+		State<input class="shorter state" type="text" placeholder="State">
+		Post Code<input class="shorter post-code" type="text" placeholder="Post Code"><br>
+		Country<input type="text" placeholder="Country"><br>
+		<button class="cancel">Cancel</button>
+		<button class="save">Save</button>
+	</form>
+	
+
+	<h1>Pop-up</h1>
+
+	<button onclick="display('block')">Click me!</button>
+
+	<section>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consequuntur atque vitae quos earum et doloremque error repellat illum? Quaerat sapiente perspiciatis veritatis cupiditate dignissimos quasi, fugit saepe non tempore.</section>
+	<section>Ipsa fugiat quibusdam quo quos ad dolores exercitationem magni veritatis eum debitis dignissimos quia, impedit rerum culpa ducimus repellendus, temporibus tempora omnis voluptate amet! Veritatis animi tenetur, itaque impedit. Neque.</section>
+	<section>Tenetur iste, sint, veritatis non quasi voluptatum, magnam accusantium sed minima accusamus aut corrupti distinctio fuga in sunt! A accusamus adipisci beatae, quod laboriosam sed repellat minima ipsum quisquam mollitia!</section>
+	
+	<script>
+			function display(state){
+				document.getElementById('form').style.display = state;
+				document.getElementById('wrapper').style.display = state;
+			}
+		</script>
+</body>
+</html>

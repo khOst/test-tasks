@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap_grid.css"> -->
+	<style>
+		.gallery-wrapper {
+			width: 80%;
+			margin: auto;
+			border: 1px solid rgba(0,0,0,.2);
+			overflow: hidden;
+		}
+
+		.row {
+			padding-top: 10px;
+		}
+
+		.row:first-child {
+			padding-top: 0;
+		}
+
+		.row:before,
+		.row:after {
+			content: " ";
+			display: table;
+			clear: both;
+		}
+
+		.gallery-wrapper img {
+			width: 25%;
+			position: relative;
+			float: left;
+			box-sizing: border-box;
+			webkit-box-sizing: border-box;
+			moz-box-sizing: border-box;
+			border: 5px solid #555;
+			background: #000 center center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			border-radius: 50%;
+			webkit-border-radius: 50%;
+			moz-border-radius: 50%;
+			/*min-height: 200px;*/
+			-webkit-transition: all 0.4s ease;
+			-moz-transition: all 0.4s ease;
+			-ms-transition: all 0.4s ease;
+			-o-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+		}
+		
+		
+		.gallery-wrapper img:hover {
+			border-color: yellow !important;
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+
+		.row img:first-child {
+			border-color: red;
+		}
+
+		@media screen and (max-width: 900px) {
+			.gallery-wrapper img {
+				width: 50%;
+			}
+
+		}
+
+		@media screen and (max-width: 500px) {
+			.gallery-wrapper img {
+				width: 100% !important;
+			}
+
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="gallery-wrapper">
+
+		<div class="row">
+			<img src="../task-3/1.jpg" alt="1">
+			<img src="../task-3/2.jpg" alt="2">
+			<img src="../task-3/3.jpg" alt="3">
+			<img src="../task-3/4.jpg" alt="4">
+		</div>
+
+		<div class="row">
+			<img src="../task-3/5.jpg" alt="5">
+			<img src="../task-3/6.jpg" alt="6">
+			<img src="../task-3/7.jpg" alt="7">
+			<img src="../task-3/8.jpg" alt="8">
+		</div>
+
+		<div class="row">
+			<img src="../task-3/9.jpg" alt="9">
+			<img src="../task-3/10.jpg" alt="10">
+			<img src="../task-3/11.jpg" alt="11">
+			<img src="../task-3/12.jpg" alt="12">
+		</div>
+
+	</div>
+
+	<script>
+		// element.querySelector
+	</script>
+</body>
+</html>
