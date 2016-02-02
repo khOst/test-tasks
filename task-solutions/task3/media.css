@@ -1,0 +1,19 @@
+@media screen and (max-width: 900px) {
+	#gallery-wrapper > div {
+		width: 50%;
+	}
+
+	#gallery-wrapper > div:nth-child(2n+1) > img{
+		border-color: red;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#gallery-wrapper > div {
+		width: 100%;
+	}
+
+	#gallery-wrapper > div > img{
+		border-color: red;
+	}
+}

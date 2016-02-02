@@ -1,0 +1,137 @@
+body {
+	position: relative;
+}
+
+#gallery-wrapper {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+#gallery-wrapper:before,
+#gallery-wrapper:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#gallery-wrapper > div {
+	width: 25%;
+	float: left;
+	position: relative;
+}
+
+#gallery-wrapper > div:nth-child(4n+1) > img{
+	border-color: red;
+}
+
+.row:before,
+.row:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.img {
+	margin: 0 auto;
+	width: 250px;
+	height: 250px;
+	display: block;
+	box-sizing: border-box;
+	webkit-box-sizing: border-box;
+	moz-box-sizing: border-box;
+	border: 5px solid #555;
+	background: #000 center center;
+	border-radius: 50%;
+	webkit-border-radius: 50%;
+	moz-border-radius: 50%;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.img:hover {
+	border-color: yellow !important;
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+h1 {
+	z-index: 10;
+	text-align: center;
+	color: rgba(1,1,1,.8);
+	text-shadow: 1px 1px 0 yellow;
+}
+
+#wrapper {
+	display: none;
+	z-index: 11;
+	opacity: 0.6;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 16px;
+	background-color: #000;
+}
+
+#full-image {
+	display: none;
+	margin: auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 12;
+}
+
+#full-image > img:first-child {
+	border: none;
+	width: inherit;
+	height: auto;
+	border-radius: initial;
+	transform: inherit;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.close {
+	cursor: pointer;
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 15;
+	display: none;
+}
+
+.delete {
+	position: absolute;
+	cursor: pointer;
+	right: 0px;
+	top: 200px;
+}
+
+.restore {
+	padding: 15px;
+	background-color: yellow;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	font-size: 20px;
+}
+
